@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Camera Snap"
 include(":app")
- 
+include(":mylibrary")

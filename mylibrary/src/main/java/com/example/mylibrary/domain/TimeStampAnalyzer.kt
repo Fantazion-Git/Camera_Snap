@@ -1,4 +1,4 @@
-package com.example.camerasnap.domain
+package com.example.mylibrary.domain
 
 import androidx.camera.core.ImageAnalysis.Analyzer
 import androidx.camera.core.ImageProxy

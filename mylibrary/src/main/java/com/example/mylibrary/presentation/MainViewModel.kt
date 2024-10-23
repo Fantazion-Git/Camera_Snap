@@ -1,14 +1,15 @@
-package com.example.camerasnap.presentation
+package com.example.mylibrary.presentation
 
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.view.PreviewView
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.camerasnap.domain.Camera
-import com.example.camerasnap.domain.usecases.GetTimeStampFlowUseCase
-import com.example.camerasnap.domain.usecases.MakeAndSavePhotoUseCase
+import com.example.mylibrary.domain.Camera
+import com.example.mylibrary.domain.usecases.GetTimeStampFlowUseCase
+import com.example.mylibrary.domain.usecases.MakeAndSavePhotoUseCase
 import dagger.Lazy
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -52,7 +53,7 @@ class MainViewModel(
         }
     }
 
-    fun initCamera(activity: AppCompatActivity, previewView: PreviewView) {
+    fun initCamera(activity: FragmentActivity, previewView: PreviewView) {
         camera.initCamera(activity, previewView)
     }
 }

@@ -1,17 +1,17 @@
-package com.example.camerasnap.data
+package com.example.mylibrary.data
 
 import android.content.ContentResolver
 import android.content.ContentValues
 import android.os.Build
 import android.provider.MediaStore
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
-import com.example.camerasnap.domain.Camera
-import com.example.camerasnap.domain.TimeStampAnalyzer
+import androidx.fragment.app.FragmentActivity
+import com.example.mylibrary.domain.Camera
+import com.example.mylibrary.domain.TimeStampAnalyzer
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -91,7 +91,7 @@ class CameraImpl(
         )
     }
 
-    override fun initCamera(activity: AppCompatActivity, previewView: PreviewView) {
+    override fun initCamera(activity: FragmentActivity, previewView: PreviewView) {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(activity)
 
         cameraProviderFuture.addListener({

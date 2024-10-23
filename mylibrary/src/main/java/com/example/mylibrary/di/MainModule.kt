@@ -1,11 +1,13 @@
-package com.example.camerasnap.di
+package com.example.mylibrary.di
 
+import android.app.Activity
 import android.content.ContentResolver
+import android.content.Context
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.Preview
-import com.example.camerasnap.MainActivity
-import com.example.camerasnap.data.CameraImpl
-import com.example.camerasnap.domain.Camera
+import androidx.fragment.app.FragmentActivity
+import com.example.mylibrary.data.CameraImpl
+import com.example.mylibrary.domain.Camera
 import dagger.Module
 import dagger.Provides
 import java.util.concurrent.ExecutorService
@@ -38,5 +40,5 @@ class MainModule {
 
     @Singleton
     @Provides
-    fun provideContentResolver(activity: MainActivity): ContentResolver = activity.contentResolver
+    fun provideContentResolver(fragmentActivity: FragmentActivity): ContentResolver = fragmentActivity.contentResolver
 }

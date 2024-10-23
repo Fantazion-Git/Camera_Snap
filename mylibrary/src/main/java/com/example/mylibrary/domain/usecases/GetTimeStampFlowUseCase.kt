@@ -1,6 +1,6 @@
-package com.example.camerasnap.domain.usecases
+package com.example.mylibrary.domain.usecases
 
-import com.example.camerasnap.domain.Camera
+import com.example.mylibrary.domain.Camera
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first

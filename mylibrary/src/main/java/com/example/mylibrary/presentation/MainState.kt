@@ -1,4 +1,4 @@
-package com.example.camerasnap.presentation
+package com.example.mylibrary.presentation
 
 data class MainState(
 
